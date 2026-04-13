@@ -1,0 +1,329 @@
+INFO 2026-01-28 11:41:42,216 autoreload 21264 21000 Watching for file changes with StatReloader
+INFO 2026-01-28 11:42:12,447 autoreload 21928 13396 Watching for file changes with StatReloader
+INFO 2026-01-28 11:42:17,300 log 21928 21624 "GET / HTTP/1.1" 200 5995
+WARNING 2026-01-28 11:42:17,744 log 21928 21624 Not Found: /favicon.ico
+WARNING 2026-01-28 11:42:17,745 log 21928 21624 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-01-28 11:42:31,397 log 21928 21624 "GET /accounts/register/ HTTP/1.1" 200 6171
+INFO 2026-01-28 11:43:20,281 log 21928 21624 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-01-28 11:43:20,286 log 21928 21624 "GET /accounts/login/ HTTP/1.1" 200 4073
+INFO 2026-01-28 11:43:33,484 log 21928 21624 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-28 11:43:33,499 log 21928 21624 "GET /accounts/profile/ HTTP/1.1" 200 6279
+INFO 2026-01-28 11:43:44,259 log 21928 21624 "GET / HTTP/1.1" 200 5978
+INFO 2026-01-28 11:43:51,259 log 21928 21624 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 11:44:13,328 models 21928 21624 AFC is enabled with max remote calls: 10.
+INFO 2026-01-28 11:44:14,358 _client 21928 21624 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 503 Service Unavailable"
+ERROR 2026-01-28 11:44:14,359 ai_engine 21928 21624 Error explaining code: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+ERROR 2026-01-28 11:44:14,360 views 21928 21624 Error in explain_view: Failed to explain code. Please try again later.
+INFO 2026-01-28 11:44:14,379 log 21928 21624 "POST /code_ai/explain/ HTTP/1.1" 200 4737
+INFO 2026-01-28 11:47:25,207 autoreload 21636 2452 Watching for file changes with StatReloader
+INFO 2026-01-28 11:47:28,063 log 21636 20504 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 11:47:28,890 log 21636 20504 "GET / HTTP/1.1" 200 5978
+INFO 2026-01-28 11:47:35,277 log 21636 20504 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 11:47:50,232 models 21636 20504 AFC is enabled with max remote calls: 10.
+INFO 2026-01-28 11:47:50,628 _client 21636 20504 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 503 Service Unavailable"
+ERROR 2026-01-28 11:47:50,629 ai_engine 21636 20504 Error explaining code: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+ERROR 2026-01-28 11:47:50,629 views 21636 20504 Error in explain_view: Failed to explain code. Please try again later.
+INFO 2026-01-28 11:47:50,655 log 21636 20504 "POST /code_ai/explain/ HTTP/1.1" 200 4737
+INFO 2026-01-28 11:51:08,600 autoreload 21636 2452 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 11:51:09,408 autoreload 9860 20352 Watching for file changes with StatReloader
+INFO 2026-01-28 11:51:24,609 autoreload 9860 20352 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 11:51:25,200 autoreload 3136 5184 Watching for file changes with StatReloader
+ERROR 2026-01-28 11:51:25,833 ai_engine 3136 5184 Failed to configure Gemini API: module 'google.generativeai' has no attribute 'Client'
+INFO 2026-01-28 11:51:37,754 autoreload 3136 5184 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 11:51:38,641 autoreload 19188 22320 Watching for file changes with StatReloader
+ERROR 2026-01-28 11:51:39,185 ai_engine 19188 22320 Failed to configure Gemini API: module 'google.generativeai' has no attribute 'Client'
+INFO 2026-01-28 11:51:42,853 log 19188 22240 "GET / HTTP/1.1" 200 5978
+INFO 2026-01-28 11:51:44,533 log 19188 22240 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+ERROR 2026-01-28 11:51:55,306 views 19188 22240 Error in explain_view: AI service is not properly configured. Please try again later.
+INFO 2026-01-28 11:51:55,326 log 19188 22240 "POST /code_ai/explain/ HTTP/1.1" 200 4752
+INFO 2026-01-28 11:54:33,068 autoreload 19188 22320 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 11:54:34,006 autoreload 2580 21292 Watching for file changes with StatReloader
+ERROR 2026-01-28 11:54:34,576 ai_engine 2580 21292 Failed to configure Gemini API: module 'google.generativeai' has no attribute 'Client'
+INFO 2026-01-28 11:55:45,348 log 2580 428 "GET / HTTP/1.1" 200 5978
+INFO 2026-01-28 11:55:49,525 log 2580 428 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+ERROR 2026-01-28 11:56:00,792 views 2580 428 Error in explain_view: AI service is not properly configured. Please try again later.
+INFO 2026-01-28 11:56:00,812 log 2580 428 "POST /code_ai/explain/ HTTP/1.1" 200 4752
+INFO 2026-01-28 11:57:05,384 autoreload 2580 21292 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 11:57:06,386 autoreload 3152 10660 Watching for file changes with StatReloader
+ERROR 2026-01-28 11:57:06,938 ai_engine 3152 10660 Failed to configure Gemini API: module 'google.generativeai' has no attribute 'Client'
+ERROR 2026-01-28 11:57:27,558 views 3152 18400 Error in explain_view: AI service is not properly configured. Please try again later.
+INFO 2026-01-28 11:57:27,591 log 3152 18400 "POST /code_ai/explain/ HTTP/1.1" 200 4752
+INFO 2026-01-28 11:57:29,299 log 3152 18400 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+ERROR 2026-01-28 11:57:31,274 views 3152 18400 Error in explain_view: AI service is not properly configured. Please try again later.
+INFO 2026-01-28 11:57:31,276 log 3152 18400 "POST /code_ai/explain/ HTTP/1.1" 200 4752
+INFO 2026-01-28 11:57:34,598 log 3152 18400 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 11:58:38,830 autoreload 3152 10660 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 11:58:39,815 autoreload 20628 22412 Watching for file changes with StatReloader
+ERROR 2026-01-28 11:58:40,452 ai_engine 20628 22412 Failed to configure Gemini API: module 'google.generativeai' has no attribute 'Client'
+ERROR 2026-01-28 11:58:50,340 views 20628 8036 Error in explain_view: AI service is not properly configured. Please try again later.
+INFO 2026-01-28 11:58:50,374 log 20628 8036 "POST /code_ai/explain/ HTTP/1.1" 200 4752
+INFO 2026-01-28 11:59:53,820 autoreload 20628 22412 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 11:59:54,794 autoreload 15884 12736 Watching for file changes with StatReloader
+ERROR 2026-01-28 11:59:55,357 ai_engine 15884 12736 Failed to configure Gemini API: module 'google.generativeai' has no attribute 'Client'
+INFO 2026-01-28 11:59:57,936 log 15884 19936 "GET / HTTP/1.1" 200 5978
+INFO 2026-01-28 11:59:59,474 log 15884 19936 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+ERROR 2026-01-28 12:00:13,351 views 15884 19936 Error in explain_view: AI service is not properly configured. Please try again later.
+INFO 2026-01-28 12:00:13,371 log 15884 19936 "POST /code_ai/explain/ HTTP/1.1" 200 4752
+INFO 2026-01-28 12:00:59,875 autoreload 15884 12736 C:\Users\abhib\test\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-01-28 12:01:00,776 autoreload 9060 15124 Watching for file changes with StatReloader
+ERROR 2026-01-28 12:01:01,323 ai_engine 9060 15124 Failed to configure Gemini API: module 'google.generativeai' has no attribute 'Client'
+INFO 2026-01-28 12:06:18,938 autoreload 22380 19716 Watching for file changes with StatReloader
+INFO 2026-01-28 12:06:19,469 ai_engine 22380 19716 Gemini API configured successfully
+INFO 2026-01-28 12:06:22,434 log 22380 11952 "GET / HTTP/1.1" 200 5978
+INFO 2026-01-28 12:06:24,115 log 22380 11952 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 12:06:41,881 log 22380 11952 "POST /code_ai/explain/ HTTP/1.1" 200 5482
+INFO 2026-01-28 12:10:33,999 autoreload 21620 8936 Watching for file changes with StatReloader
+INFO 2026-01-28 12:10:34,534 ai_engine 21620 8936 Gemini API configured successfully
+INFO 2026-01-28 12:10:37,341 log 21620 18688 "GET / HTTP/1.1" 200 5978
+INFO 2026-01-28 12:10:40,561 log 21620 18688 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 12:10:55,407 log 21620 18688 "POST /code_ai/explain/ HTTP/1.1" 200 5720
+INFO 2026-01-28 12:14:04,890 log 21620 18688 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 12:14:48,720 log 21620 18688 "POST /code_ai/explain/ HTTP/1.1" 200 5352
+INFO 2026-01-28 12:20:29,108 log 21620 22004 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 12:49:07,680 autoreload 4640 3032 Watching for file changes with StatReloader
+INFO 2026-01-28 12:49:12,250 ai_engine 4640 3032 Gemini API configured successfully
+INFO 2026-01-28 12:49:19,767 log 4640 9644 "GET / HTTP/1.1" 200 5977
+INFO 2026-01-28 12:49:23,993 log 4640 9644 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 12:49:42,264 log 4640 9644 "POST /code_ai/explain/ HTTP/1.1" 200 5252
+INFO 2026-01-28 12:49:49,673 log 4640 9644 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 12:49:54,403 log 4640 9644 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-28 12:50:01,109 models 4640 9644 AFC is enabled with max remote calls: 10.
+INFO 2026-01-28 12:50:10,497 _client 4640 9644 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-01-28 12:50:10,555 log 4640 9644 "POST /quizzes/ HTTP/1.1" 200 6907
+INFO 2026-01-28 12:50:24,574 log 4640 9644 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-28 12:51:08,485 log 4640 15656 "GET /code_ai/debug/ HTTP/1.1" 200 3256
+INFO 2026-01-28 12:51:25,467 log 4640 15656 "POST /code_ai/debug/ HTTP/1.1" 200 6962
+INFO 2026-01-28 12:51:34,265 log 4640 15656 "GET /code_ai/debug/ HTTP/1.1" 200 3256
+INFO 2026-01-28 12:51:38,541 log 4640 15656 "GET /code_ai/convert/ HTTP/1.1" 200 3908
+INFO 2026-01-28 12:51:57,726 log 4640 15656 "POST /code_ai/convert/ HTTP/1.1" 200 6940
+INFO 2026-01-28 12:52:50,520 log 4640 15656 "GET /code_ai/convert/ HTTP/1.1" 200 3908
+INFO 2026-01-28 12:52:54,779 log 4640 15656 "GET /activity/history/ HTTP/1.1" 200 5444
+INFO 2026-01-28 15:42:16,880 autoreload 9428 14748 Watching for file changes with StatReloader
+INFO 2026-01-28 15:42:18,697 ai_engine 9428 14748 Gemini API configured successfully
+INFO 2026-01-28 15:42:32,603 log 9428 11436 "GET / HTTP/1.1" 200 5995
+WARNING 2026-01-28 15:42:33,138 log 9428 11436 Not Found: /favicon.ico
+WARNING 2026-01-28 15:42:33,143 log 9428 11436 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-01-28 15:42:39,475 log 9428 11256 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 15:42:56,460 log 9428 11256 "POST /code_ai/explain/ HTTP/1.1" 200 5558
+INFO 2026-01-28 15:43:00,977 log 9428 11256 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 15:49:05,831 log 9428 484 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-28 15:49:29,609 log 9428 484 "POST /code_ai/explain/ HTTP/1.1" 200 11816
+INFO 2026-01-28 15:49:51,715 log 9428 484 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-29 16:33:05,474 autoreload 18392 13336 Watching for file changes with StatReloader
+INFO 2026-01-29 16:33:06,430 ai_engine 18392 13336 Gemini API configured successfully
+INFO 2026-01-29 16:33:51,644 log 18392 2260 "GET / HTTP/1.1" 200 5995
+WARNING 2026-01-29 16:33:52,054 log 18392 2260 Not Found: /favicon.ico
+WARNING 2026-01-29 16:33:52,057 log 18392 2260 "GET /favicon.ico HTTP/1.1" 404 2972
+ERROR 2026-01-29 16:33:54,089 log 18392 12196 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\base.py", line 556, in parse
+    raise self.error(token, e)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\base.py", line 554, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\base.py", line 676, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\nihal\OneDrive\Documents\codenova\venv\Lib\site-packages\django\template\base.py", line 776, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Template: C:\Users\nihal\OneDrive\Documents\codenova\templates\accounts\login.html, Could not parse the remainder: '(attrs={'id':'id_username','autocomplete':'username','autocapitalize':'off','spellcheck':'false','required':'required'})' from 'form.username.as_widget(attrs={'id':'id_username','autocomplete':'username','autocapitalize':'off','spellcheck':'false','required':'required'})'
+ERROR 2026-01-29 16:33:54,101 log 18392 12196 "GET /accounts/login/ HTTP/1.1" 500 166843
+INFO 2026-01-29 16:34:49,541 autoreload 4572 18488 Watching for file changes with StatReloader
+INFO 2026-01-29 16:34:50,361 ai_engine 4572 18488 Gemini API configured successfully
+INFO 2026-01-29 16:35:01,297 log 4572 15304 "GET / HTTP/1.1" 200 5995
+INFO 2026-01-29 16:35:03,374 log 4572 15304 "GET /accounts/login/ HTTP/1.1" 200 4073
+INFO 2026-01-29 16:35:25,904 log 4572 15304 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-29 16:35:25,933 log 4572 15304 "GET /accounts/profile/ HTTP/1.1" 200 6291
+INFO 2026-01-29 16:35:38,685 log 4572 15304 "GET / HTTP/1.1" 200 5977
+INFO 2026-01-29 16:35:40,382 log 4572 15304 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-29 16:36:16,066 log 4572 15304 "POST /code_ai/explain/ HTTP/1.1" 200 11852
+INFO 2026-01-29 16:36:56,547 log 4572 15304 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 14:03:08,218 autoreload 17664 5748 Watching for file changes with StatReloader
+INFO 2026-01-30 14:03:09,428 ai_engine 17664 5748 Gemini API configured successfully
+INFO 2026-01-30 14:11:10,142 log 17664 11208 "GET / HTTP/1.1" 200 5995
+WARNING 2026-01-30 14:11:10,502 log 17664 11208 Not Found: /favicon.ico
+WARNING 2026-01-30 14:11:10,504 log 17664 11208 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-01-30 14:11:15,095 log 17664 22928 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 14:11:20,241 log 17664 22928 "GET /code_ai/debug/ HTTP/1.1" 200 3256
+INFO 2026-01-30 14:11:25,373 log 17664 22928 "GET /code_ai/convert/ HTTP/1.1" 200 3908
+INFO 2026-01-30 14:11:29,841 log 17664 22928 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-30 14:11:34,976 log 17664 22928 "GET /activity/history/ HTTP/1.1" 200 4165
+INFO 2026-01-30 14:16:15,167 log 17664 22928 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 14:16:35,073 log 17664 22928 "POST /code_ai/explain/ HTTP/1.1" 200 9454
+INFO 2026-01-30 14:16:42,613 log 17664 22928 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 14:16:58,925 log 17664 22928 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-30 14:17:16,528 models 17664 22928 AFC is enabled with max remote calls: 10.
+INFO 2026-01-30 14:17:46,647 models 17664 5800 AFC is enabled with max remote calls: 10.
+INFO 2026-01-30 14:18:45,170 models 17664 1400 AFC is enabled with max remote calls: 10.
+INFO 2026-01-30 14:18:49,626 _client 17664 22928 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-01-30 14:18:49,676 basehttp 17664 22928 - Broken pipe from ('127.0.0.1', 56244)
+INFO 2026-01-30 14:18:53,852 _client 17664 1400 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-01-30 14:18:53,858 log 17664 1400 "POST /quizzes/ HTTP/1.1" 200 6956
+INFO 2026-01-30 14:19:08,824 log 17664 1400 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-30 14:19:09,386 _client 17664 5800 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-01-30 14:19:09,432 basehttp 17664 5800 - Broken pipe from ('127.0.0.1', 50866)
+INFO 2026-01-30 14:19:20,314 models 17664 1400 AFC is enabled with max remote calls: 10.
+INFO 2026-01-30 14:19:29,255 _client 17664 1400 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-01-30 14:19:29,260 log 17664 1400 "POST /quizzes/ HTTP/1.1" 200 7047
+INFO 2026-01-30 14:23:15,725 models 17664 1400 AFC is enabled with max remote calls: 10.
+INFO 2026-01-30 14:23:24,777 _client 17664 1400 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-01-30 14:23:24,784 log 17664 1400 "POST /quizzes/ HTTP/1.1" 200 6982
+INFO 2026-01-30 14:23:26,302 log 17664 1400 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-30 14:23:30,222 log 17664 1400 "GET / HTTP/1.1" 200 5995
+INFO 2026-01-30 15:20:11,270 autoreload 4040 5360 Watching for file changes with StatReloader
+INFO 2026-01-30 15:20:12,517 ai_engine 4040 5360 Gemini API configured successfully
+INFO 2026-01-30 15:20:20,545 log 4040 2928 "GET / HTTP/1.1" 200 5995
+WARNING 2026-01-30 15:20:20,931 log 4040 2928 Not Found: /favicon.ico
+WARNING 2026-01-30 15:20:20,933 log 4040 2928 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-01-30 15:20:53,014 log 4040 23740 "GET /accounts/login/ HTTP/1.1" 200 4073
+INFO 2026-01-30 15:20:56,999 log 4040 23740 "GET /accounts/login/ HTTP/1.1" 200 4073
+INFO 2026-01-30 15:21:08,084 log 4040 23740 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-01-30 15:21:08,113 log 4040 23740 "GET /accounts/profile/ HTTP/1.1" 200 6291
+INFO 2026-01-30 15:21:30,235 log 4040 9360 "GET / HTTP/1.1" 200 5977
+INFO 2026-01-30 15:21:32,050 log 4040 9360 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 15:21:53,520 log 4040 9360 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 15:22:25,063 log 4040 9360 "POST /code_ai/explain/ HTTP/1.1" 200 6393
+INFO 2026-01-30 15:22:36,100 log 4040 9360 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 15:22:40,607 log 4040 9360 "GET /code_ai/debug/ HTTP/1.1" 200 3256
+INFO 2026-01-30 15:24:19,922 log 4040 9360 "POST /code_ai/debug/ HTTP/1.1" 200 10108
+INFO 2026-01-30 15:24:46,727 log 4040 9360 "GET /code_ai/debug/ HTTP/1.1" 200 3256
+INFO 2026-01-30 15:24:55,048 log 4040 9360 "GET /code_ai/convert/ HTTP/1.1" 200 3908
+INFO 2026-01-30 15:25:23,873 log 4040 9360 "POST /code_ai/convert/ HTTP/1.1" 200 5900
+INFO 2026-01-30 15:29:27,668 log 4040 9360 "GET /code_ai/convert/ HTTP/1.1" 200 3908
+INFO 2026-01-30 15:29:32,721 log 4040 9360 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-30 15:29:47,919 models 4040 9360 AFC is enabled with max remote calls: 10.
+INFO 2026-01-30 15:29:57,551 _client 4040 9360 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-01-30 15:29:57,573 log 4040 9360 "POST /quizzes/ HTTP/1.1" 200 6846
+INFO 2026-01-30 15:30:19,817 log 4040 9360 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-01-30 15:30:24,663 log 4040 9360 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 15:30:42,718 log 4040 9360 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-01-30 15:30:57,341 log 4040 9360 "POST /code_ai/explain/ HTTP/1.1" 200 9808
+INFO 2026-01-30 15:31:09,472 log 4040 9360 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-13 14:37:56,825 autoreload 15168 19572 Watching for file changes with StatReloader
+INFO 2026-02-13 14:39:12,280 autoreload 5816 12216 Watching for file changes with StatReloader
+INFO 2026-02-13 14:39:16,342 ai_engine 5816 12216 Gemini API configured successfully
+INFO 2026-02-13 14:39:25,013 log 5816 19596 "GET / HTTP/1.1" 200 5995
+WARNING 2026-02-13 14:39:25,368 log 5816 19596 Not Found: /favicon.ico
+WARNING 2026-02-13 14:39:25,370 log 5816 19596 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-02-13 14:39:29,854 log 5816 6908 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-13 14:39:39,380 log 5816 6908 "POST /code_ai/explain/ HTTP/1.1" 200 8852
+INFO 2026-02-13 14:40:19,367 log 5816 6908 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-13 14:43:47,808 autoreload 4520 15628 Watching for file changes with StatReloader
+INFO 2026-02-13 14:43:48,781 ai_engine 4520 15628 Gemini API configured successfully
+INFO 2026-02-13 14:43:54,311 log 4520 10992 "GET / HTTP/1.1" 200 5995
+WARNING 2026-02-13 14:43:54,618 log 4520 10992 Not Found: /favicon.ico
+WARNING 2026-02-13 14:43:54,619 log 4520 10992 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-02-13 14:43:55,841 log 4520 744 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-13 14:49:30,099 log 4520 25276 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-13 14:50:21,431 log 4520 25276 "POST /code_ai/explain/ HTTP/1.1" 200 9496
+INFO 2026-02-13 14:50:32,654 log 4520 25276 "POST /code_ai/download/ HTTP/1.1" 200 3356
+INFO 2026-02-13 14:50:34,078 log 4520 25276 "POST /code_ai/download/ HTTP/1.1" 200 3356
+INFO 2026-02-13 14:50:42,689 log 4520 25276 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-13 14:50:52,573 log 4520 25276 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-02-13 14:51:01,327 models 4520 25276 AFC is enabled with max remote calls: 10.
+INFO 2026-02-13 14:51:12,200 _client 4520 25276 HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+INFO 2026-02-13 14:51:12,209 log 4520 25276 "POST /quizzes/ HTTP/1.1" 200 7373
+INFO 2026-02-13 14:51:18,668 log 4520 25276 "GET /quizzes/ HTTP/1.1" 200 5492
+INFO 2026-02-19 20:36:14,802 autoreload 12596 12324 Watching for file changes with StatReloader
+INFO 2026-02-19 20:36:16,479 ai_engine 12596 12324 Gemini API configured successfully
+INFO 2026-02-19 20:36:33,364 log 12596 23976 "GET / HTTP/1.1" 200 5995
+INFO 2026-02-19 20:36:33,368 log 12596 24680 "GET / HTTP/1.1" 200 5995
+WARNING 2026-02-19 20:36:33,644 log 12596 24680 Not Found: /favicon.ico
+WARNING 2026-02-19 20:36:33,645 log 12596 24680 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-02-19 20:47:31,052 autoreload 10176 12252 Watching for file changes with StatReloader
+INFO 2026-02-19 20:47:31,936 ai_engine 10176 12252 Gemini API configured successfully
+INFO 2026-02-19 20:47:38,873 log 10176 15856 "GET / HTTP/1.1" 200 5995
+WARNING 2026-02-19 20:47:39,088 log 10176 15856 Not Found: /favicon.ico
+WARNING 2026-02-19 20:47:39,090 log 10176 15856 "GET /favicon.ico HTTP/1.1" 404 2972
+INFO 2026-02-19 20:47:45,875 log 10176 15856 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-19 20:50:42,038 log 10176 22468 "GET / HTTP/1.1" 200 5995
+INFO 2026-02-19 20:50:44,584 log 10176 22468 "GET /code_ai/explain/ HTTP/1.1" 200 3279
+INFO 2026-02-19 20:52:40,024 autoreload 10176 12252 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 20:52:43,493 autoreload 19620 20740 Watching for file changes with StatReloader
+INFO 2026-02-19 20:52:44,545 ai_engine 19620 20740 Gemini API configured successfully
+INFO 2026-02-19 20:54:17,069 autoreload 19620 20740 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\views.py changed, reloading.
+INFO 2026-02-19 20:54:18,613 autoreload 21024 9736 Watching for file changes with StatReloader
+INFO 2026-02-19 20:54:19,647 ai_engine 21024 9736 Gemini API configured successfully
+INFO 2026-02-19 20:54:42,942 autoreload 21024 9736 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\views.py changed, reloading.
+INFO 2026-02-19 20:54:44,494 autoreload 19624 23644 Watching for file changes with StatReloader
+INFO 2026-02-19 20:54:45,455 ai_engine 19624 23644 Gemini API configured successfully
+INFO 2026-02-19 20:55:15,496 autoreload 19624 23644 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\urls.py changed, reloading.
+INFO 2026-02-19 20:55:16,995 autoreload 4524 12092 Watching for file changes with StatReloader
+INFO 2026-02-19 20:55:17,979 ai_engine 4524 12092 Gemini API configured successfully
+INFO 2026-02-19 20:55:30,125 autoreload 4524 12092 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\urls.py changed, reloading.
+INFO 2026-02-19 20:55:31,230 autoreload 10756 23440 Watching for file changes with StatReloader
+INFO 2026-02-19 20:55:32,198 ai_engine 10756 23440 Gemini API configured successfully
+INFO 2026-02-19 20:55:34,252 autoreload 10756 23440 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\urls.py changed, reloading.
+INFO 2026-02-19 20:55:35,435 autoreload 4568 560 Watching for file changes with StatReloader
+INFO 2026-02-19 20:55:36,377 ai_engine 4568 560 Gemini API configured successfully
+INFO 2026-02-19 20:55:40,570 autoreload 4568 560 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\urls.py changed, reloading.
+INFO 2026-02-19 20:55:41,786 autoreload 20900 5000 Watching for file changes with StatReloader
+INFO 2026-02-19 20:55:42,744 ai_engine 20900 5000 Gemini API configured successfully
+INFO 2026-02-19 20:57:33,927 autoreload 20900 5000 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 20:57:35,428 autoreload 20640 15040 Watching for file changes with StatReloader
+INFO 2026-02-19 21:05:47,948 autoreload 20640 15040 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:05:48,839 autoreload 15996 17320 Watching for file changes with StatReloader
+INFO 2026-02-19 21:05:49,809 ai_engine 15996 17320 Gemini API configured successfully
+INFO 2026-02-19 21:05:54,451 autoreload 15996 17320 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:05:55,800 autoreload 4640 19572 Watching for file changes with StatReloader
+INFO 2026-02-19 21:05:56,848 ai_engine 4640 19572 Gemini API configured successfully
+INFO 2026-02-19 21:06:56,072 autoreload 8456 16192 Watching for file changes with StatReloader
+INFO 2026-02-19 21:06:57,005 ai_engine 8456 16192 Gemini API configured successfully
+INFO 2026-02-19 21:07:03,646 log 4640 4956 "GET / HTTP/1.1" 200 6042
+INFO 2026-02-19 21:07:08,599 log 4640 4956 "GET /code_ai/generate/ HTTP/1.1" 200 3319
+INFO 2026-02-19 21:08:04,139 log 4640 4956 "GET /code_ai/generate/ HTTP/1.1" 200 3811
+INFO 2026-02-19 21:08:18,742 log 4640 4956 "POST /code_ai/generate/ HTTP/1.1" 200 4496
+INFO 2026-02-19 21:17:27,139 autoreload 8456 16192 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:17:27,584 autoreload 4640 19572 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:17:28,813 autoreload 9684 15148 Watching for file changes with StatReloader
+INFO 2026-02-19 21:17:29,296 autoreload 10644 24520 Watching for file changes with StatReloader
+INFO 2026-02-19 21:19:03,291 autoreload 9684 15148 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:19:03,632 autoreload 10644 24520 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:19:04,245 autoreload 6088 21012 Watching for file changes with StatReloader
+INFO 2026-02-19 21:19:04,593 autoreload 21428 9388 Watching for file changes with StatReloader
+INFO 2026-02-19 21:19:05,221 ai_engine 6088 21012 Gemini API configured successfully
+INFO 2026-02-19 21:19:05,527 ai_engine 21428 9388 Gemini API configured successfully
+INFO 2026-02-19 21:19:15,862 log 6088 23992 "GET / HTTP/1.1" 200 6042
+INFO 2026-02-19 21:19:18,557 log 6088 23992 "GET /code_ai/generate/ HTTP/1.1" 200 3811
+INFO 2026-02-19 21:19:29,552 log 6088 23992 "POST /code_ai/generate/ HTTP/1.1" 200 5621
+INFO 2026-02-19 21:24:52,085 autoreload 21428 9388 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:24:52,135 autoreload 6088 21012 C:\Users\nihal\OneDrive\Documents\codenova\code_ai\ai_engine.py changed, reloading.
+INFO 2026-02-19 21:24:53,673 autoreload 22468 18508 Watching for file changes with StatReloader
+INFO 2026-02-19 21:24:54,664 ai_engine 22468 18508 Gemini API configured successfully
+INFO 2026-02-19 21:24:55,747 autoreload 14216 2204 Watching for file changes with StatReloader
+INFO 2026-02-19 21:24:56,731 ai_engine 14216 2204 Gemini API configured successfully

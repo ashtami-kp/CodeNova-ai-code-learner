@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeNova | Activity History</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Orbitron:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(155,92,255,.18), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(0,245,255,.18), transparent 45%),
+        linear-gradient(120deg,#0b0b1a,#14142e,#0b0b1a);
+    background-size:200% 200%;
+    animation:bgFlow 20s ease infinite;
+    color:#eaeaff;
+    overflow:hidden;
+}
+
+@keyframes bgFlow{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Floating orbs */
+.orb{
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:radial-gradient(circle, rgba(0,245,255,.35), transparent 70%);
+    filter:blur(45px);
+    animation:orbMove 22s infinite alternate ease-in-out;
+}
+.orb.purple{
+    background:radial-gradient(circle, rgba(155,92,255,.4), transparent 70%);
+    animation-duration:28s;
+}
+
+@keyframes orbMove{
+    from{transform:translate(-30px,-20px);}
+    to{transform:translate(30px,20px);}
+}
+
+/* Floating code snippets */
+.code-bg span{
+    position:absolute;
+    font-family:'JetBrains Mono',monospace;
+    color:rgba(0,245,255,.08);
+    font-size:14px;
+    animation:float 18s linear infinite;
+}
+@keyframes float{
+    from{transform:translateY(110vh);opacity:0;}
+    to{transform:translateY(-120vh);opacity:1;}
+}
+
+/* Activity Card */
+.activity-card{
+    position:relative;
+    width:650px;
+    max-height:75vh;
+    overflow-y:auto;
+    padding:45px;
+    background:rgba(21,21,40,.88);
+    border-radius:26px;
+    border:1px solid rgba(155,92,255,.25);
+    box-shadow:0 0 50px rgba(0,245,255,.25);
+    backdrop-filter:blur(12px);
+    z-index:2;
+    animation:cardPulse 6s ease-in-out infinite;
+}
+
+@keyframes cardPulse{
+    0%,100%{box-shadow:0 0 25px rgba(155,92,255,.2);}
+    50%{box-shadow:0 0 50px rgba(0,245,255,.35);}
+}
+
+/* Heading */
+h2{
+    text-align:center;
+    font-family:'Orbitron',sans-serif;
+    font-size:28px;
+    background:linear-gradient(90deg,#00f5ff,#9b5cff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:30px;
+}
+
+/* Activity List */
+ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+li{
+    background:rgba(0,0,0,.3);
+    border-radius:14px;
+    padding:14px 18px;
+    margin-bottom:12px;
+    font-size:14px;
+    color:#eaeaff;
+    transition:0.3s ease, transform 0.2s ease;
+}
+li:hover{
+    transform:translateX(8px) scale(1.02);
+    background:rgba(0,245,255,.15);
+    box-shadow:0 0 15px rgba(0,245,255,.3);
+}
+
+/* Empty state */
+.empty{
+    text-align:center;
+    font-style:italic;
+    color:#888;
+}
+
+/* Scrollbar */
+.activity-card::-webkit-scrollbar {
+    width:8px;
+}
+.activity-card::-webkit-scrollbar-thumb{
+    background:linear-gradient(#6a8cff,#9b7cff);
+    border-radius:10px;
+}
+
+/* Responsive */
+@media(max-width:700px){
+    .activity-card{width:90%;padding:35px;}
+    h2{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Orbs -->
+<div class="orb" style="top:10%;left:15%"></div>
+<div class="orb purple" style="bottom:15%;right:10%"></div>
+
+<!-- Floating code -->
+<div class="code-bg">
+    <span style="left:10%">console.log("history")</span>
+    <span style="left:30%">if(user){track()}</span>
+    <span style="left:55%">while(true){learn()}</span>
+    <span style="left:75%">function log()</span>
+</div>
+
+<div class="activity-card">
+    <h2>My Activity History</h2>
+
+    <ul>
+        {% for act in activities %}
+            <li>
+                <strong>{{ act.timestamp }}</strong><br>
+                {{ act.get_action_display }} — {{ act.description }}
+            </li>
+        {% empty %}
+            <li class="empty">No activity yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<script>
+/* Floating code spans random positions & duration */
+document.querySelectorAll(".code-bg span").forEach(el=>{
+    el.style.left = Math.random()*100 + "%";
+    el.style.animationDuration = 15 + Math.random()*10 + "s";
+});
+</script>
+
+</body>
+</html>

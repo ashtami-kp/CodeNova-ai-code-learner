@@ -1,0 +1,180 @@
+/* ===============================
+   CODENOVA – Pastel Theme CSS
+   Pastel Blue & Pastel Purple
+   =============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --pastel-blue: #cfe9ff;
+    --pastel-purple: #e5d4ff;
+    --deep-blue: #6a8cff;
+    --deep-purple: #9b7cff;
+    --text-dark: #2c2c2c;
+    --glass-bg: rgba(255, 255, 255, 0.35);
+    --glass-border: rgba(255, 255, 255, 0.45);
+}
+
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-purple));
+    background-attachment: fixed;
+    color: var(--text-dark);
+    animation: bgMove 12s ease infinite;
+}
+
+/* ===== Background Animation ===== */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 15px 30px;
+}
+
+.navbar a {
+    color: var(--deep-blue);
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--deep-purple);
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Glass Card ===== */
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    border: 1px solid var(--glass-border);
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+    color: var(--deep-purple);
+    margin-bottom: 15px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    background: linear-gradient(135deg, var(--deep-blue), var(--deep-purple));
+    border: none;
+    border-radius: 30px;
+    padding: 10px 22px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(106, 140, 255, 0.4);
+}
+
+/* ===== Forms ===== */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px var(--deep-blue);
+}
+
+/* ===== Tables ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--glass-bg);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: rgba(155, 124, 255, 0.2);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* ===== Floating Animation ===== */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--deep-blue), var(--deep-purple));
+    border-radius: 10px;
+}

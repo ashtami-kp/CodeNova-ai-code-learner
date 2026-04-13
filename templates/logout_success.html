@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out Successfully</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: radial-gradient(circle at top, #0a0f2c, #050714);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #e6ebff;
+        }
+
+        /* Matrix background */
+        body::before {
+            content: "010101 logout session end security auth ";
+            position: fixed;
+            inset: 0;
+            font-family: monospace;
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(106,140,255,0.08);
+            animation: matrixScroll 25s linear infinite;
+            white-space: pre-wrap;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes matrixScroll {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(100%); }
+        }
+
+        .logout-card {
+            position: relative;
+            background: rgba(15, 22, 60, 0.7);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 50px 45px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow:
+                0 0 40px rgba(106,140,255,0.45),
+                inset 0 0 25px rgba(155,124,255,0.25);
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+            text-align: center;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logout-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 20px 0 10px 0;
+            background: linear-gradient(135deg, #6a8cff, #b084ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 16px;
+            color: #b6c2ff;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.35s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6a8cff, #b084ff);
+            color: white;
+            box-shadow: 0 0 25px rgba(106,140,255,0.5);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 40px rgba(155,124,255,0.9);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: #e6ebff;
+            border: 1px solid rgba(106,140,255,0.4);
+            box-shadow: 0 0 15px rgba(106,140,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(106,140,255,0.15);
+            box-shadow: 0 0 25px rgba(106,140,255,0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="logout-card">
+    <div class="logout-icon">👋</div>
+    <h1>Logged Out Successfully</h1>
+    <p>You have been securely logged out of your account. Thank you for using CodeNova!</p>
+    
+    <div class="button-group">
+        <a href="{% url 'login' %}" class="btn btn-primary">Login Again</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Go to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

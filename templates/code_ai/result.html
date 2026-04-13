@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeNova | Explanation Result</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Fira+Code&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #1a1a40, #0f0f1a);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            color: #eaeaff;
+        }
+
+        /* Result Card */
+        .result-card {
+            width: 760px;
+            padding: 45px;
+            background: rgba(20, 20, 45, 0.9);
+            border-radius: 28px;
+            border: 1px solid rgba(155, 92, 255, 0.45);
+            box-shadow: 0 0 45px rgba(0, 245, 255, 0.25);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #00f5ff, #9b5cff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Markdown Content Styling */
+        .markdown-content {
+            line-height: 1.7;
+            color: #d4d4d4;
+            margin-bottom: 30px;
+        }
+
+        .markdown-content h1,
+        .markdown-content h2,
+        .markdown-content h3,
+        .markdown-content h4,
+        .markdown-content h5,
+        .markdown-content h6 {
+            color: #00f5ff;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .markdown-content h1 { font-size: 24px; }
+        .markdown-content h2 { font-size: 20px; }
+        .markdown-content h3 { font-size: 18px; }
+
+        .markdown-content p {
+            margin-bottom: 15px;
+        }
+
+        .markdown-content ul,
+        .markdown-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .markdown-content li {
+            margin-bottom: 8px;
+        }
+
+        .markdown-content code {
+            background: rgba(0, 245, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #caffff;
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+        }
+
+        .markdown-content pre {
+            background: #0f0f1a;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 245, 255, 0.35);
+            overflow-x: auto;
+            margin: 15px 0;
+            box-shadow: inset 0 0 20px rgba(0, 245, 255, 0.15);
+        }
+
+        .markdown-content pre code {
+            background: none;
+            padding: 0;
+            color: #caffff;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid #9b5cff;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #a8a8ff;
+            font-style: italic;
+        }
+
+        .markdown-content a {
+            color: #00f5ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .markdown-content a:hover {
+            text-decoration: underline;
+            color: #9b5cff;
+        }
+
+        .markdown-content strong {
+            color: #00f5ff;
+            font-weight: 600;
+        }
+
+        .markdown-content em {
+            color: #b8b8ff;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #00f5ff, #9b5cff);
+            color: #0f0f1a;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(0, 245, 255, 0.8);
+        }
+        /* Download Button Styling */
+.download-form {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a8cff, #9b7cff);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(106, 140, 255, 0.3);
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(106, 140, 255, 0.5);
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="result-card">
+    <h2>Explanation Result</h2>
+
+    <div class="markdown-content">
+        {{ result|safe }}
+    </div>
+
+    <a class="back-link" href="{% url 'explain_code' %}">
+        Explain Another Code
+    </a>
+</div>
+
+<form method="post" action="{% url 'download_pdf' %}" class="download-form">
+    {% csrf_token %}
+    <textarea name="content" hidden>{{ result|striptags }}</textarea>
+    <button type="submit" class="download-btn">
+        ⬇ Download as PDF
+    </button>
+</form>
+
+</body>
+</html>

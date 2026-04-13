@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeNova | Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(155,92,255,.18), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(0,245,255,.18), transparent 45%),
+        linear-gradient(120deg,#0b0b1a,#14142e,#0b0b1a);
+    background-size:200% 200%;
+    animation:bgFlow 20s ease infinite;
+    color:#eaeaff;
+    overflow:hidden;
+}
+
+@keyframes bgFlow{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Floating orbs */
+.orb{
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:radial-gradient(circle, rgba(0,245,255,.35), transparent 70%);
+    filter:blur(45px);
+    animation:orbMove 22s infinite alternate ease-in-out;
+}
+.orb.purple{
+    background:radial-gradient(circle, rgba(155,92,255,.4), transparent 70%);
+    animation-duration:28s;
+}
+
+@keyframes orbMove{
+    from{transform:translate(-30px,-20px);}
+    to{transform:translate(30px,20px);}
+}
+
+/* Login card */
+.login-card{
+    position:relative;
+    width:380px;
+    padding:40px;
+    background:rgba(21,21,40,.88);
+    border-radius:24px;
+    border:1px solid rgba(155,92,255,.25);
+    box-shadow:0 0 35px rgba(0,245,255,.25);
+    backdrop-filter:blur(12px);
+    z-index:2;
+    animation:cardPulse 6s ease-in-out infinite;
+}
+
+@keyframes cardPulse{
+    0%,100%{box-shadow:0 0 25px rgba(155,92,255,.2);}
+    50%{box-shadow:0 0 50px rgba(0,245,255,.35);}
+}
+
+h2{
+    text-align:center;
+    font-family:'Orbitron',sans-serif;
+    font-size:28px;
+    background:linear-gradient(90deg,#00f5ff,#9b5cff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:25px;
+}
+
+/* Inputs */
+input{
+    width:100%;
+    padding:12px;
+    border-radius:14px;
+    border:1px solid rgba(74, 0, 193, 0.4);
+    background:#0f0f1a;
+    color:#eaeaff;
+    outline:none;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+input:focus{
+    box-shadow:0 0 0 2px rgba(0,245,255,.6);
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#9b5cff,#00f5ff);
+    color:#0f0f1a;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px rgba(0,245,255,.8);
+}
+
+/* Register text */
+.register-text{
+    text-align:center;
+    margin-top:18px;
+    font-size:14px;
+    color:#b8b8ff;
+}
+.register-text a{
+    color:#00f5ff;
+    font-weight:500;
+    text-decoration:none;
+}
+.register-text a:hover{
+    text-shadow:0 0 10px #00f5ff;
+}
+
+/* Responsive */
+@media(max-width:420px){
+    .login-card{width:90%;padding:30px;}
+    h2{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Orbs in background -->
+<div class="orb" style="top:10%;left:15%"></div>
+<div class="orb purple" style="bottom:15%;right:10%"></div>
+
+<div class="login-card">
+    <h2>Login to CodeNova</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="register-text">
+        New user? <a href="{% url 'register' %}">Register here</a>
+    </p>
+</div>
+</body>
+</html>

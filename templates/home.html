@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeNova | Home</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Orbitron:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(155,92,255,.18), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(0,245,255,.18), transparent 45%),
+        linear-gradient(120deg,#0b0b1a,#14142e,#0b0b1a);
+    background-size:200% 200%;
+    animation:bgFlow 20s ease infinite;
+    color:#eaeaff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    overflow:hidden;
+}
+
+@keyframes bgFlow{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Orbs */
+.orb{
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:radial-gradient(circle, rgba(0,245,255,.35), transparent 70%);
+    filter:blur(50px);
+    animation:orbMove 22s infinite alternate ease-in-out;
+}
+.orb.purple{
+    background:radial-gradient(circle, rgba(155,92,255,.4), transparent 70%);
+    animation-duration:28s;
+}
+
+@keyframes orbMove{
+    from{transform:translate(-40px,-30px)}
+    to{transform:translate(40px,30px)}
+}
+
+/* Floating code */
+.code-bg span{
+    position:absolute;
+    font-family:'JetBrains Mono',monospace;
+    color:rgba(0,245,255,.12);
+    font-size:14px;
+    animation:codeFloat linear infinite;
+}
+
+@keyframes codeFloat{
+    from{transform:translate(-10vw,120vh);opacity:0}
+    to{transform:translate(10vw,-130vh);opacity:1}
+}
+
+/* Card */
+.home-card{
+    background:rgba(18,18,36,.88);
+    backdrop-filter:blur(22px);
+    border-radius:28px;
+    width:1000px;
+    padding:70px 60px 50px;
+    border:1px solid rgba(155,92,255,.25);
+    box-shadow:0 0 35px rgba(0,245,255,.18);
+    animation:cardBreath 5s ease-in-out infinite;
+    z-index:2;
+}
+
+@keyframes cardBreath{
+    0%,100%{box-shadow:0 0 30px rgba(155,92,255,.2)}
+    50%{box-shadow:0 0 55px rgba(0,245,255,.35)}
+}
+
+/* Auth */
+.auth{
+    position:absolute;
+    top:25px;
+    right:25px;
+    display:flex;
+    gap:14px;
+}
+.auth a{
+    padding:10px 22px;
+    border-radius:30px;
+    border:1px solid rgba(0,245,255,.6);
+    color:#00f5ff;
+    text-decoration:none;
+    transition:.3s;
+}
+.auth a:hover{
+    background:#00f5ff;
+    color:#0b0b1a;
+}
+
+/* Title */
+h1{
+    font-family:'Orbitron',sans-serif;
+    font-size:58px;
+    background:linear-gradient(90deg,#00f5ff,#9b5cff,#00f5ff);
+    background-size:200%;
+    animation:titleShift 4s linear infinite;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+@keyframes titleShift{
+    to{background-position:200%}
+}
+
+.subtitle{
+    text-align:center;
+    color:#b8b8ff;
+    margin-bottom:32px;
+}
+
+/* Status */
+.status{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    background:#0b0b1a;
+    border:1px solid rgba(0,245,255,.3);
+    border-radius:12px;
+    padding:10px 16px;
+    margin-bottom:25px;
+    width:fit-content;
+}
+
+/* Editor */
+.editor{
+    background:#0b0b1a;
+    border-radius:14px;
+    padding:22px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    color:#aefeff;
+    margin-bottom:32px;
+    border:1px solid rgba(155,92,255,.3);
+}
+.editor span{color:#9b5cff}
+
+.cursor{animation:blink 1s infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* Navigation */
+.nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+.nav a{
+    padding:16px 32px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#151528,#1f1f3a);
+    border:1px solid rgba(155,92,255,.45);
+    color:#eaeaff;
+    text-decoration:none;
+    transition:.35s;
+}
+.nav a:hover{
+    transform:translateY(-5px) scale(1.06);
+    background:linear-gradient(135deg,#9b5cff,#00f5ff);
+    color:#0b0b1a;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .home-card{width:95%;padding:55px 25px}
+    h1{font-size:44px}
+    .auth{position:static;justify-content:center;margin-bottom:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="orb" style="top:12%;left:14%"></div>
+<div class="orb purple" style="bottom:18%;right:12%"></div>
+
+<div class="code-bg">
+    <span>if(error){fix()}</span>
+    <span>function AI()</span>
+    <span>console.log()</span>
+    <span>while(true){learn()}</span>
+</div>
+
+<div class="home-card">
+
+<div class="auth">
+{% if user.is_authenticated %}
+<a href="#">Hi {{ user.username }}</a>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+<a href="{% url 'login' %}">Login</a>
+<a href="{% url 'register' %}">Register</a>
+{% endif %}
+</div>
+
+<h1 id="typing"></h1>
+<p class="subtitle">AI-powered coding assistant</p>
+
+<div class="status">🤖 AI Status: Analyzing<span class="cursor">|</span></div>
+
+<div class="editor">
+<span>def</span> explain_code(code):<br>
+&nbsp;&nbsp;print("Understanding logic...")<br>
+&nbsp;&nbsp;<span>return</span> "Clean explanation"<span class="cursor">|</span>
+</div>
+
+<div class="nav">
+<a href="/code_ai/explain/">🧠 Explain</a>
+<a href="/code_ai/debug/">🐞 Debug</a>
+<a href="/code_ai/convert/">🔁 Convert</a>
+<a href="/code_ai/generate/">⚡ Generate</a>
+<a href="/quizzes/">📝 Quiz</a>
+<a href="/activity/history/">📜 History</a>
+</div>
+
+
+</div>
+<script>
+/* Typing once */
+const text = "Welcome to CodeNova";
+let i = 0;
+
+function typeOnce(){
+    const el = document.getElementById("typing");
+    if(i < text.length){
+        el.innerHTML += text.charAt(i++);
+        setTimeout(typeOnce, 80);
+    }
+}
+
+window.onload = typeOnce;
+
+/* Floating code random */
+document.querySelectorAll(".code-bg span").forEach(el=>{
+    el.style.left = Math.random()*100 + "%";
+    el.style.animationDuration = 15 + Math.random()*10 + "s";
+});
+
+/* Status dots */
+let d = 0;
+setInterval(()=>{
+    d = (d + 1) % 4;
+    document.querySelector(".status").innerHTML =
+        "🤖 AI Status: Analyzing" + ".".repeat(d) + '<span class="cursor">|</span>';
+}, 500);
+
+</script>
+
+</body>
+</html>

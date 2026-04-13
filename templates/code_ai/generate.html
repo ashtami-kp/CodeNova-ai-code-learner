@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Source Code</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+            color: white;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .generate-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .generate-form input,
+        .generate-form select {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        .generate-form input::placeholder {
+            color: #ddd;
+        }
+
+        .generate-form button {
+            padding: 12px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(135deg, #6a8cff, #9b7cff);
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .generate-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(155, 124, 255, 0.6);
+        }
+
+        .markdown-body {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 25px;
+            background: #1e1e2f;
+            border-radius: 12px;
+            color: white;
+            overflow-x: auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+         .markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+    font-size: 18px;   /* smaller comments */
+    font-weight: 600;
+    color: #b8b8ff;
+    margin-top: 20px;
+}
+
+.markdown-body p {
+    font-size: 16px;
+}
+
+.markdown-body code,
+.markdown-body pre {
+    font-size: 20px;   /* bigger code */
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.markdown-body pre {
+    background: #0f0f1f;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+   
+        }
+
+        .download-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: none;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+        }
+
+        hr {
+            margin-top: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Generate Source Code</h2>
+
+<form method="post" class="generate-form">
+    {% csrf_token %}
+
+    <input type="text" name="topic"
+           placeholder="Enter topic (e.g. Sum of two numbers)"
+           required>
+
+    <select name="language" required>
+        <option value="">Select Language</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Django">Django</option>
+    </select>
+
+    <button type="submit">Generate Code</button>
+</form>
+
+{% if result %}
+    <hr>
+
+    <div class="markdown-body">
+        {{ result|safe }}
+    </div>
+
+    <form method="post" action="{% url 'download_pdf' %}">
+        {% csrf_token %}
+        <textarea name="content" hidden>{{ result|striptags }}</textarea>
+        <button type="submit" class="download-btn">
+            ⬇ Download as PDF
+        </button>
+    </form>
+{% endif %}
+
+</body>
+</html>
