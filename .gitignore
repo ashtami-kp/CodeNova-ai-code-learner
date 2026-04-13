@@ -1,6 +1,8 @@
 # Byte-compiled / optimized / DLL files
+venv/
 __pycache__/
 *.py[codz]
+db.sqlite3
 *$py.class
 
 # C extensions
