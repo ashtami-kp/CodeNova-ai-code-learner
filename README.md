@@ -1,4 +1,5 @@
 🚀 CodeNova – AI Code Explainer & Converter
+
 📌 Description
 
 CodeNova is an AI-powered platform designed to help learners and developers understand code more effectively. It provides line-by-line explanations, automatic language detection, and code conversion across multiple programming languages.
@@ -6,6 +7,7 @@ CodeNova is an AI-powered platform designed to help learners and developers unde
 This project aims to bridge the gap between reading code and truly understanding its logic, making it especially useful for students and beginners.
 
 ✨ Features
+
 🔍 Auto Language Detection
 
 Automatically identifies the programming language of any code snippet.
